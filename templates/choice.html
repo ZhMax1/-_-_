@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exploring {{ planet_name }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .card-header {
+            background-color: black;
+            color: white;
+        }
+        .subheading {
+            background-color: lightblue;
+            color: black;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2>Мое предложение: {{ planet_name }}</h2>
+        </div>
+        <div class="card-body">
+            <h3 class="subheading">Близость к Земле</h3>
+            <p>Планета {{ planet_name }} находится на сравнительно небольшом расстоянии от Земли.</p>
+
+            <h4 class="subheading">Наличие воды и атмосферы</h4>
+            <p>Планета {{ planet_name }} {{ "имеет" if planet_name != "Меркурий" else "не имеет" }} воду и
+                атмосферу.</p>
+
+            <h5 class="subheading">Магнитное поле</h5>
+            <p> На планете {{ planet_name }} есть магнитное поле.</p>
+
+            <h6 class="subheading">В конце концов, она просто красива</h6>
+            <p>Планета {{ planet_name }} просто великолепна!</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
